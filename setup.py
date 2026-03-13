@@ -18,10 +18,10 @@ def get_requirements(file_path:str) -> List[str]: #type: ignore
     return requirements
 
 setup(
-    name = "mlProject",
+    name = "MachineLearning",
     version = "0.0.1",
     author = "Aadarsh",
     author_email = "aadarshrai1801@gmail.com",
     packages = find_packages(),
-    install_requires = get_requirements("requirements.txt")
+    install_requires = get_requirements("Requirements.txt")
 )
