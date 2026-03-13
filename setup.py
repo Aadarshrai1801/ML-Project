@@ -18,7 +18,7 @@ def get_requirements(file_path:str) -> List[str]: #type: ignore
     return requirements
 
 setup(
-    name = "ML-Development",
+    name = "mlProject",
     version = "0.0.1",
     author = "Aadarsh",
     author_email = "aadarshrai1801@gmail.com",
