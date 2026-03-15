@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Exam Performance Predictor</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg,#667eea,#764ba2);
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:420px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 8px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+label{
+    font-weight:bold;
+}
+
+.form-control{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:#667eea;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#5a67d8;
+}
+
+.result{
+    text-align:center;
+    margin-top:20px;
+    padding:15px;
+    background:#f3f4ff;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Exam Performance Indicator</h1>
+
+<form action="{{ url_for('predict_datapoint')}}" method="post">
+
+<label>Gender</label>
+<select class="form-control" name="gender" required>
+<option selected disabled value="">Select Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+
+<label>Race or Ethnicity</label>
+<select class="form-control" name="race_ethnicity" required>
+<option selected disabled value="">Select Ethnicity</option>
+<option value="group A">Group A</option>
+<option value="group B">Group B</option>
+<option value="group C">Group C</option>
+<option value="group D">Group D</option>
+<option value="group E">Group E</option>
+</select>
+
+<label>Parental Level of Education</label>
+<select class="form-control" name="parental_level_of_education" required>
+<option selected disabled value="">Select Parent Education</option>
+<option value="associate's degree">Associate's Degree</option>
+<option value="bachelor's degree">Bachelor's Degree</option>
+<option value="high school">High School</option>
+<option value="master's degree">Master's Degree</option>
+<option value="some college">Some College</option>
+<option value="some high school">Some High School</option>
+</select>
+
+<label>Lunch Type</label>
+<select class="form-control" name="lunch" required>
+<option selected disabled value="">Select Lunch</option>
+<option value="free/reduced">Free / Reduced</option>
+<option value="standard">Standard</option>
+</select>
+
+<label>Test Preparation Course</label>
+<select class="form-control" name="test_preparation_course" required>
+<option selected disabled value="">Select Course</option>
+<option value="none">None</option>
+<option value="completed">Completed</option>
+</select>
+
+<label>Writing Score (0-100)</label>
+<input class="form-control" type="number" name="writing_score" min="0" max="100" required>
+
+<label>Reading Score (0-100)</label>
+<input class="form-control" type="number" name="reading_score" min="0" max="100" required>
+
+<button class="btn" type="submit">Predict Maths Score</button>
+
+</form>
+
+{% if results %}
+<div class="result">
+Predicted Maths Score: {{results}}
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
