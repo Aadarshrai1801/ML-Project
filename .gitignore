@@ -135,9 +135,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-catboost_info
-Notebook\catboost_info
-Notebook\Catboost-Info
 Artifacts
 .env
 .envrc
