@@ -1,5 +1,5 @@
 import sys
-from Src.Logger import logging
+from src.logger import logging
 
 def error_message_details(error, error_detail: sys): #type: ignore
     _, _, exec_tb = error_detail.exc_info()
