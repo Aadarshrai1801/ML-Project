@@ -5,11 +5,11 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
-from Src.Exception import CustomException
-from Src.Logger import logging
-from Src.Components.Data_Transformation import DataTransformation
-from Src.Components.Data_Transformation import DataTransformationConfig
-from Src.Components.Model_Training import ModelTrainerConfig, ModelTrainer
+from src.exception import CustomException
+from src.logger import logging
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
+from src.components.model_training import ModelTrainerConfig, ModelTrainer
 
 @dataclass
 class DataIngestionConfig:
