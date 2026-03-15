@@ -2,9 +2,7 @@ flask
 gunicorn
 pandas
 numpy
-seaborn
-matplotlib
 scikit-learn
-xgboost
+xgboost==1.7.6
+catboost==1.2
 dill
--e .
