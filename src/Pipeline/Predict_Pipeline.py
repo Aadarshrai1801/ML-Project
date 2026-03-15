@@ -2,8 +2,8 @@ import sys
 import pandas as pd
 import numpy as np
 
-from Src.Exception import CustomException
-from Src.Utils import load_objects
+from src.Exception import CustomException
+from src.Utils import load_objects
 
 class PredictPipeline:
     def __init__(self):

@@ -4,7 +4,7 @@ import pandas as pd
 
 from sklearn.preprocessing import StandardScaler
 
-from Src.Pipeline.Predict_Pipeline import CustomData, PredictPipeline
+from src.pipeline.Predict_Pipeline import CustomData, PredictPipeline
 
 application = Flask(__name__)
 app = application
