@@ -6,3 +6,4 @@ scikit-learn
 xgboost==1.7.6
 catboost==1.2
 dill
+-e .
